@@ -1,0 +1,27 @@
+.chart{
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-result{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+.div-conteiner{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.div-result-row{
+    font-size: 20px;
+    border: 2px solid #673ab7;
+    padding: 15px;
+    border-radius: 5px;
+}

@@ -1,0 +1,27 @@
+<mat-sidenav-container class="conteiner">
+    <mat-sidenav class="sidenav" mode="side" opened="true" fixedInViewport="true" fixedTopGap="50">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons teste">
+                    home
+                </i>
+                Iníco
+            </a>
+            <a mat-list-item routerLink="/extrato">
+                <i class="material-icons list-item">
+                    history
+                </i>
+                Extrato
+            </a>
+            <a mat-list-item routerLink="/extrato/novo-lancamento">
+                <i class="material-icons">
+                    add
+                </i>
+                Novo Lançamento
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

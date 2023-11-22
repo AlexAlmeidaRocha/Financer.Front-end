@@ -1,0 +1,22 @@
+.table {
+    overflow: scroll;
+    max-height: 680px;
+    margin-bottom: 28px;
+}
+
+.actions-icons {
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.div-filter-and-saldo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.label-saldo {
+    font-size: 1.5rem;
+}

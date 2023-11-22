@@ -1,0 +1,46 @@
+  .header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: 2px solid #888080;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .header i {
+    padding-right: 10px;
+  }
+
+  .header p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+  }
+
+  .logout {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .current-page {
+    margin-left: 40px;
+  }
+
+  .user-name {
+    margin-right: 10px;
+  }
+
+  .icon-logout {
+    cursor: pointer;
+  }

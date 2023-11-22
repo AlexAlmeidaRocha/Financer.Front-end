@@ -1,0 +1,18 @@
+<mat-toolbar class="header">
+    <span class="logo">
+        <a>Colocar um logo</a>
+    </span>
+    <span class="current-page">
+        <a>
+            <i class="material-icons">
+                {{ currentIconPage }}
+            </i>
+            <p>{{ currentNamePage }}</p>
+        </a>
+    </span>
+    <div class="logout">
+        <span class="user-name">{{ userName }}</span>
+        <i (click)="logout()" class="material-icons icon-logout">logout</i>
+    </div>
+
+</mat-toolbar>

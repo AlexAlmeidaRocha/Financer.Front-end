@@ -1,0 +1,19 @@
+<div class="div-conteiner">
+    <span class="title">Editar lançamento</span>
+
+    <div class="div-form">
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="data.description">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Data" [(ngModel)]="data.date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="div-buttons">
+        <button mat-raised-button color="primary" (click)="onSave()">Salvar</button>
+        <button mat-raised-button color="warn" (click)="onCancel()">Cancelar</button>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<form class="form-conteiner" [formGroup]="revenueForm" (ngSubmit)="addRevenue()">
+    <mat-form-field class="form-field">
+        <input matInput placeholder="Descrição" formControlName="description">
+        <mat-error *ngIf="revenueForm.get('description')?.invalid && revenueForm.get('description')?.touched">
+            A descrição é obrigatória
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+        <input matInput type="number" placeholder="Valor" formControlName="value">
+        <mat-error *ngIf="revenueForm.get('value')?.invalid && revenueForm.get('value')?.touched">
+            O valor é obrigatório
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+        <input matInput [matDatepicker]="picker" placeholder="Data" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="revenueForm.get('date')?.invalid && revenueForm.get('date')?.touched">
+            A data é obrigatória
+        </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="revenueForm.invalid">
+        Adicionar Lançamento
+    </button>
+</form>

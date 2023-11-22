@@ -1,0 +1,36 @@
+<div class="div-conteiner">
+    <form class="form-conteiner" [formGroup]="newAcountForm" (ngSubmit)="createUser(newAcountForm)">
+        <mat-form-field class="form-field">
+            <input matInput placeholder="Nome Completo" formControlName="name">
+            <mat-error *ngIf="newAcountForm.get('name')?.invalid && newAcountForm.get('name')?.touched">
+                O nome é obrigatório
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+            <input matInput placeholder="Usuário" formControlName="user">
+            <mat-error *ngIf="newAcountForm.get('user')?.invalid && newAcountForm.get('user')?.touched">
+                O usuário é obrigatório
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+            <input matInput placeholder="Senha" formControlName="password" type="password">
+            <mat-error *ngIf="newAcountForm.get('password')?.invalid && newAcountForm.get('password')?.touched">
+                A senha é obrigatória
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+            <input matInput placeholder="Confirmar Senha" formControlName="confirmPassword" type="password">
+            <mat-error
+                *ngIf="newAcountForm.get('confirmPassword')?.hasError('required') && newAcountForm.get('confirmPassword')?.touched">
+                A confirmação de senha é obrigatória
+            </mat-error>
+        </mat-form-field>
+
+        <button class="form-button" mat-raised-button color="primary" type="submit" [disabled]="newAcountForm.invalid">
+            Salvar
+        </button>
+    </form>
+</div>

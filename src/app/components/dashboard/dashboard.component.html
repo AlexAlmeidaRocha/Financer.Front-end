@@ -1,0 +1,30 @@
+<div class="chart">
+    <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="barChartType"
+        (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+    </canvas>
+</div>
+
+<div class="div-conteiner">
+    <div class="div-result">
+        <div class="div-result-row">
+            <mat-label>Entradas: </mat-label>
+            <mat-label [ngStyle]="{ 'color': 'green'}">
+                R$ {{ revenue }}
+            </mat-label>
+        </div>
+
+        <div class="div-result-row">
+            <mat-label>Saídas: </mat-label>
+            <mat-label [ngStyle]="{ 'color': 'red' }">
+                R$ {{ expense }}
+            </mat-label>
+        </div>
+
+        <div class="div-result-row">
+            <mat-label>Saldo: </mat-label>
+            <mat-label [ngStyle]="balance >= 0 ? { 'color': 'green'} : { 'color': 'red' }">
+                R$ {{ balance }}
+            </mat-label>
+        </div>
+    </div>
+</div>

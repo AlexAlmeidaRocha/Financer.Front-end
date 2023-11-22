@@ -1,0 +1,25 @@
+<div class="div-conteiner">
+    <form class="form-conteiner" [formGroup]="loginForm" (ngSubmit)="login()">
+        <mat-form-field class="form-field">
+            <input matInput placeholder="Usuário" formControlName="user">
+            <mat-error *ngIf="loginForm.get('user')?.invalid && loginForm.get('user')?.touched">
+                O usuário é obrigatório
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+            <input matInput placeholder="Senha" formControlName="password" type="password">
+            <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                A senha é obrigatória
+            </mat-error>
+        </mat-form-field>
+        <button class="form-button" mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+            Entrar
+        </button>
+        <div class="new-account">
+            <a href="/nova-conta" mat-button color="primary">Criar conta</a>
+            <a (click)="noFunction()" mat-button color="primary">Esqueci a senha</a>
+        </div>
+
+    </form>
+</div>

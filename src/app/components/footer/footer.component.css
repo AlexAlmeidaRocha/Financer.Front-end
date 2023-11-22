@@ -1,0 +1,12 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    border-top: 2px solid #888080;
+}
+
+.footer a {
+    text-decoration: none;
+}
